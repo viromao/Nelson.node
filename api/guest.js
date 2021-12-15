@@ -6,6 +6,7 @@ module.exports = app =>{
 
         const guest = {...req.body}
         if (req.params.id) guest.id = req.params.id
+        if(req.user.id) guest.id_user_guest = req.user.id
 
 
         try{
